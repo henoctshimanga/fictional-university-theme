@@ -18,6 +18,16 @@
 
         <div class="post-item">
           <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+
+          <div class="metabox">
+            <p>Posted by Henoc on Feb 13, 2025 in News</p>
+          </div>
+
+            <div class="generic-content">
+              <?php the_excerpt(); ?>
+              <p><a class="btn--blue btn" href="<?php the_permalink(); ?>">Continue reading &raquo;</a></p>
+            </div>
+
         </div>
 
        <?php }
