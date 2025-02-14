@@ -20,7 +20,7 @@
           <h2 class="headline headline--medium headline--post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
           <div class="metabox">
-            <p>Posted by <?php the_author_posts_link(); ?> on Feb 13, 2025 in News</p>
+            <p>Posted by <?php the_author_posts_link(); ?> on <?php the_time('M, d Y'); ?> in News</p>
           </div>
 
             <div class="generic-content">
