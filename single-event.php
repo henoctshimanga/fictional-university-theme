@@ -26,6 +26,16 @@
         <div class="generic-content">
             <?php the_content(); ?>
         </div>
+
+        <?php
+        
+        $relatedPrograms = get_field('related_programs');
+        foreach ($relatedPrograms as $program) { ?>
+            
+            <li><a href="<?php echo get_the_permalink($program); ?>"><?php echo get_the_title($program); ?></a></li>
+        <?php }
+        ?>
+
     </div>
 
         
