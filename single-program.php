@@ -31,6 +31,35 @@
 
         <?php
 
+            // Querying the related professor
+              $relatedProfessors = new WP_Query(array(
+                'posts_per_page' => -1,
+                'post_type' => 'professor',
+                'orderby' => 'title',
+                'order' => 'ASC', //Ascending order
+                'meta_query' => array(
+                  
+                  // Added filter to find a related event
+                  array(
+                      'key' => 'related_programs',
+                      'compare' => 'LIKE',
+                      'value' => '"' . get_the_ID() . '"'
+                  )
+                )
+              ));
+
+              if ($relatedProfessors->have_posts()) {
+                  echo '<hr class="section-break">';
+                  echo '<h2 class="headline headline--medium">'. get_the_title() .' Professor(s)</h2>';
+                  while($relatedProfessors->have_posts()) {
+                  $relatedProfessors->the_post(); ?>
+                  
+                  <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                  <?php }
+              }
+
+              wp_reset_postdata();
+
         // Querying to most Upcoming Events related to the program 
             $today = date('Ymd');
             $homepageEvents = new WP_Query(array(
