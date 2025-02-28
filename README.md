@@ -7,4 +7,10 @@ Installed ACF plugin, added a field group for Event Date then used the field nam
 
 After creating the archive file for the post type, I created and implemented a new Custom field that show if post type is equal to Event
 
-After resizing imag/thumbnail, we will need to Regenerate Thumbnails using the plugin "Regenerate Thumbnails"
+After resizing imag/thumbnail, I did Regenerate Thumbnails using the plugin "Regenerate Thumbnails"
+
+to customize crop on a specific thumbnail, I downloaded the plugin "Manual Image Crop by Tomasz" and used it to crop image on professor post
+based on particular nickname in use
+
+Afterward, force refresh the browser 'shift + refresh circle arrow beside url in the browser
+
